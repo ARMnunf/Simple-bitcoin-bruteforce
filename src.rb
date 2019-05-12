@@ -5,7 +5,7 @@ require 'net/http'
 require 'json'
 require 'ecdsa'
 require 'securerandom'
-
+####################donate 12JEYt6K8e5uYiyAFVY2a2fDMy5Vv3nCcV
 def hexlify(msg)
 	msg.split("").collect { |c| c[0].to_s(16) }.join
 end
@@ -41,9 +41,9 @@ def make_wallet msg
 	msg_b= msg+msg_b[0,8]
 	msg = "1"+Base58.int_to_base58(msg_b.to_i(16), :bitcoin)
 end
-#count=0
+
 simu = 0
-seed ='000000000000000000000000000000000000000000000000000000000000000e'  						#put something in the quote like 'Hi'
+seed ='000000000000000000000000000000000000000000000000000000000000000e'  						
 a= seed
 while(simu!="exit")do
 
@@ -63,7 +63,7 @@ puts a.to_s+"\n"+b.to_s+" : "+current.to_s
 if js["final_balance"].to_i!=0
 	simu=gets
 end
-#str!=start_text
+
 a = SHA256(b)
 end
 
